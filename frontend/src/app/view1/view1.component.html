@@ -1,0 +1,22 @@
+<br/>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+  <div>
+    <input type="text" name="firstName" placeholder="Enter First Name" formControlName="firstName" />
+   </div>
+   <br/>
+   <div>
+     <input type="text" name="lastName" placeholder="Enter Last Name" formControlName="lastName" />
+   </div>
+   <br/>
+   <div>
+     <select name="subject" formControlName="subject">
+       <option>Java</option>
+       <option>Python</option>
+       <option>C#</option>
+     </select>
+   </div>
+   <br/>
+   <div>
+     <input type="submit" [disabled]="!form.valid" value="Submit" />
+   </div> 
+</form>

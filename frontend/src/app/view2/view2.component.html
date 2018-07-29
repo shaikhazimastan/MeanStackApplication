@@ -1,0 +1,9 @@
+<h1>Add/Remove Subjects</h1>
+<div><span><input type="text" [(ngModel)]="newItem" placeholder="Add Subject"/></span>
+<span><button (click) = "AddItems()">ADD</button></span>
+</div>
+<div>
+  <ul>
+    <li *ngFor="let item of SubjectArr; let ind = index">{{ind + " " +item}}<span title="Remove Item" (click) = "removeItem()">X</span></li>
+  </ul>
+</div>
